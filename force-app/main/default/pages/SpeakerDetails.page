@@ -1,0 +1,38 @@
+<apex:page controller="eventSpeakerController">
+ <apex:form >
+ <apex:pageBlock >
+ <p style="Text-Align : Center">
+ <b>{! event.Name__c}</b>
+ </p>
+<p style="Text-Align : Center">
+ <b>Organized By : {! event.Organizer__r.Name}</b>
+ </p>
+ <br/>
+ <p>
+ <b>Location :</b>{! event.Location__r.City__c} ({!event.Location__r.Postal_Code__c})</p>
+ <div style="Padding-Left : 60px">
+ <br/> {! event.Location__r.Country__c}
+ </div>
+<p>
+ <b> Date and Time : </b> {! event.Start_Date__c}</p>
+<br/>
+<br/>
+ <apex:pageBlockSection title="Speaker" Collapsible="false" columns="3">
+ <apex:repeat value="{!event_speaker}" var="es">
+ <div style="border : 1px solid black ; width : 240px; height : 300px; Text-Align : Center">
+ {!es.Speaker__r.Name}
+<br/>
+ <br/> {!es.Speaker__r.Profile_URL__c}
+ <br/>
+ <br/>
+ <br/> {!es.Speaker__r.About_Me__c}
+ </div>
+ </apex:repeat>
+</apex:pageBlockSection>
+<apex:pageBlockButtons >
+<apex:commandButton action="{!URLFOR($page.EventAttendeeRegistration,null,[id=event.Id])}" value="Register As Attendee" />
+<apex:commandButton action="{!URLFOR($page.EventSpeakerRegistration,null,[id=event.Id])}" value="Register As Speaker" />
+</apex:pageBlockButtons>
+</apex:pageBlock>
+ </apex:form>
+ </apex:page>

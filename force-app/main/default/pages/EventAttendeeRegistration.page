@@ -1,0 +1,37 @@
+<apex:page controller="AttendeeRegistration">
+    <apex:form >
+              
+
+          <apex:pageBlock >
+             <apex:pageBlockSection id="section1" collapsible="true" title="Attendee">
+                <apex:inputField value="{!attendee.Name}"/>
+                <apex:inputField value="{!attendee.Email__c}"/>
+                <apex:inputField value="{!attendee.Phone__c}"></apex:inputField>
+                <apex:inputField value="{!eventAttendee.Event__c}"></apex:inputField>
+                
+                </apex:pageBlockSection>
+               
+                <apex:pageBlockSection id="section2" collapsible="true" title="Event Location">
+
+              <apex:inputField value="{!location.Street__c}"/>
+                
+               <apex:inputField value="{!location.City__c}"/>
+                
+                <apex:inputField value="{!location.State__c}"/>
+                
+             
+                
+              <apex:inputField value="{!location.Verified__c}"/>
+                
+                <apex:inputField value="{!location.Postal_Code__c}"/>
+                
+                <apex:commandButton action="{!save}" value="Save" onclick="save()" />
+                
+                
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+         
+    </apex:form>
+    
+
+</apex:page>

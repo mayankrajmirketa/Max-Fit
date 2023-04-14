@@ -1,0 +1,16 @@
+<apex:page controller="SpeakerRegistration" >
+     <apex:form >
+
+           <apex:pageBlock dir="RTL" >
+            <apex:pageBlockSection >
+                <apex:inputField value="{!speaker.Name}"/>
+                <apex:inputField value="{!speaker.Email__c}"/>
+                <apex:inputField value="{!speaker.Phone__c}"></apex:inputField>
+                <apex:inputField value="{!eventSpeaker.Event__c}"></apex:inputField>
+                <apex:commandButton action="{!save}" value="Save" onclick="save()" />
+                </apex:pageBlockSection>
+                </apex:pageBlock>
+         
+    </apex:form>
+    
+</apex:page>
