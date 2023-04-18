@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Value_In_Pearson_Rule</fullName>
+    <active>true</active>
+    <description>If Event Type field value is In-Person then user must need to select Location on Event Record.</description>
+    <errorConditionFormula>TEXT(Event_Type__c) = &quot;In-Person&quot;
+
+&amp;&amp; Location__c = NULL</errorConditionFormula>
+    <errorDisplayField>Location__c</errorDisplayField>
+    <errorMessage>Event Type field value is In-Person then you must need to select Location on Event Record.</errorMessage>
+</ValidationRule>

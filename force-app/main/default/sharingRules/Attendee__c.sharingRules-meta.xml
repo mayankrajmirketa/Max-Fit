@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>Attendee_Sharing_Rule</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>- Create a Sharing Rule which will share the Attendee records with the Role Organizer. And the permission should be Read/Edit.</description>
+        <label>Attendee Sharing Rule</label>
+        <sharedTo>
+            <role>Organizer</role>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

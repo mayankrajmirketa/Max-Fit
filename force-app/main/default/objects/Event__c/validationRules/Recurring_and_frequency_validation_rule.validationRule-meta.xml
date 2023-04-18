@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Recurring_and_frequency_validation_rule</fullName>
+    <active>true</active>
+    <errorConditionFormula>( Recurring__c =true  &amp;&amp;  TEXT(Frequency__c ) = null)  || ( Recurring__c =false  &amp;&amp;  TEXT(Frequency__c) !=null)</errorConditionFormula>
+    <errorDisplayField>Frequency__c</errorDisplayField>
+    <errorMessage>you choose Recurring? checkbox as checked so you must need to fill Frequency field &amp; If checkbox is unchecked then you cannot select Frequency field.</errorMessage>
+</ValidationRule>
